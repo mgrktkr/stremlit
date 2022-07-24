@@ -15,7 +15,7 @@ def app():
   users= res_user.json()
 
   users_dict=[]
-  for userin users:
+  for user in users:
     user_dict= {}
     user_dict['name']= user['name']
     user_dict['age']= user['age']
@@ -28,7 +28,7 @@ def app():
   st.table(user_list)
 
   users_name= {}
-  for userin users :
+  for user in users :
     users_name[user['name']]= user['key'] 
 
   # 会議室一覧を取得
@@ -37,7 +37,7 @@ def app():
   rooms= res_room.json()
 
   rooms_dict=[]
-  for roomin rooms:
+  for room in rooms:
     room_dict= {}
     room_dict['room name']= room['room_name']
     room_dict['capacity']= room['capacity']
@@ -54,18 +54,18 @@ def app():
   bookings= res_booking.json()
 
   users_key= {}
-  for userin users:
+  for user in users:
     users_key[user['key']]= user['name']
 
   rooms_key= {}
-  for roomin rooms:
+  for room in rooms:
     rooms_key[room['key']]= {
       'room_name': room['room_name'],
       'capacity': room['capacity']
     }
  
   bookings_dict=[]
-  for bookingin bookings:
+  for booking in bookings:
     booking_dict= {}
     booking_dict['name']= users_key[booking['user_key']]
     booking_dict['room name']= rooms_key[booking['room_key']]['room_name']
@@ -80,7 +80,7 @@ def app():
   st.table(booking_list)
 
   room_dict= {}
-  for roomin rooms :
+  for room in rooms :
     room_dict[room['room_name']]= {
       'room_key': room['key'],
       'capacity': room['capacity']
