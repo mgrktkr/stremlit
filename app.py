@@ -1,6 +1,6 @@
-import streamlitas st
-from multiappimport MultiApp
-from appsimport users, rooms, bookings# import your app modules here
+import streamlit as st
+from multiapp import MultiApp
+from apps import users, rooms, bookings# import your app modules here
 
 app= MultiApp()
 
