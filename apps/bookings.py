@@ -5,7 +5,7 @@ import pandas as pd
 import datetime
 
 
-endpoint= 'https://71qkv0.deta.dev/'
+endpoint= 'https://3fi7or.deta.dev/'
 
 
 def app():

@@ -2,12 +2,12 @@ import streamlit as st
 import requests
 import json
 
-endpoint= 'https://71qkv0.deta.dev/'
+endpoint= 'https://3fi7or.deta.dev/'
 
 def app():
   st.title('ユーザー登録')
   
-  url_users= endpoint+ '/users'
+  url_users= endpoint+ '/fastapi-users'
   res_user= requests.get(url_users)
   users= res_user.json()  
   st.write(users)
