@@ -7,11 +7,6 @@ endpoint= 'https://3fi7or.deta.dev'
 def app():
   st.title('ユーザー登録')
   
-  url_users= endpoint+ '/fastapi-users'
-  res_user= requests.get(url_users)
-  users= res_user.json()  
-  st.write(users)
-
   with st.form(key='user'):
     name:str = st.text_input('ユーザー名',max_chars=12)
     age:int = st.text_input('年齢',max_chars=3)
