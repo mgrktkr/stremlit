@@ -6,6 +6,11 @@ endpoint= 'https://71qkv0.deta.dev/'
 
 def app():
   st.title('ユーザー登録')
+  
+  url_users= endpoint+ '/users'
+  res_user= requests.get(url_users)
+  users= res_user.json()  
+  st.write(users)
 
   with st.form(key='user'):
     name:str = st.text_input('ユーザー名',max_chars=12)
