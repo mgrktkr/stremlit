@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 import json
 
-endpoint= 'https://3fi7or.deta.dev/'
+endpoint= 'https://3fi7or.deta.dev'
 
 def app():
   st.title('ユーザー登録')
